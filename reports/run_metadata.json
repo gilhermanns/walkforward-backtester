@@ -1,0 +1,22 @@
+{
+  "spy.us": {
+    "oos_start": "2019-07-05",
+    "oos_end": "2026-01-05",
+    "n_folds": 13
+  },
+  "aapl.us": {
+    "oos_start": "2019-07-05",
+    "oos_end": "2026-01-05",
+    "n_folds": 13
+  },
+  "qqq.us": {
+    "oos_start": "2019-07-05",
+    "oos_end": "2026-01-05",
+    "n_folds": 13
+  },
+  "tlt.us": {
+    "oos_start": "2019-07-05",
+    "oos_end": "2026-01-05",
+    "n_folds": 13
+  }
+}
