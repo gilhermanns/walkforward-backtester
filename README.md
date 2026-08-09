@@ -81,3 +81,7 @@ This backtester produces comprehensive performance metrics and visualizations, c
 <h2>License & Disclaimer</h2>
 
 This project is licensed under the MIT License. It is intended for educational and research purposes in quantitative finance. The models and results presented are for illustrative purposes and do not constitute financial advice or guarantee real-world performance. Always exercise professional judgment and conduct thorough due diligence when evaluating investment strategies.
+
+---
+
+*Entwickelt mit Unterstützung von Claude Code (Anthropic).*
