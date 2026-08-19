@@ -33,15 +33,18 @@ By employing a rolling walk-forward validation framework and incorporating reali
 
 <h2>Sample Output & Insights</h2>
 
-This backtester produces comprehensive performance metrics and visualizations, crucial for strategy evaluation and client reporting:
+The versioned report run covers four liquid US instruments across **13 out-of-sample folds** per rule-based strategy. The table below deliberately shows both positive and weak outcomes rather than selecting only favourable cases.
 
--   **Headline Comparison**: Detailed performance statistics (CAGR, Sharpe, Max Drawdown, Calmar, Annualized Volatility, Number of Trades, Win Rate, Profit Factor, Average Trade P&L) for each strategy against a buy-and-hold benchmark.
--   **Equity Curves & Drawdowns**: Visual representations of cumulative growth and drawdowns, illustrating the path of capital over time.
--   **Trade P&L Distribution**: Histograms showing the distribution of individual trade profits and losses, providing insight into strategy consistency.
--   **Regime Split Analysis**: Performance metrics broken down by market regime (e.g., high/mid/low volatility, trending/sideways markets), revealing how strategies adapt to different market environments.
--   **Cross-Ticker Robustness**: Comparison of strategy performance across various assets (e.g., SPY, AAPL, QQQ, TLT) to assess generalizability.
+| Instrument | Strategy | OOS CAGR | Sharpe | Max. drawdown | Trades | Folds |
+|---|---|---:|---:|---:|---:|---:|
+| SPY | MA crossover | 6.36% | 0.58 | -28.36% | 22 | 13 |
+| SPY | Donchian breakout | 5.15% | 0.51 | -16.26% | 44 | 13 |
+| QQQ | Donchian breakout | 9.93% | 0.81 | -19.39% | 36 | 13 |
+| TLT | MA crossover | 0.16% | 0.07 | -17.82% | 17 | 13 |
 
-*(Example charts and tables would be embedded here, showcasing equity curves, drawdown charts, trade P&L histograms, and regime-based performance tables.)*
+For context, the same report shows a 13.17% CAGR and 0.74 Sharpe for SPY buy-and-hold over its reported comparison window. This is a useful due-diligence outcome: a systematic rule can have positive out-of-sample results without demonstrating superiority to its benchmark.
+
+The full machine-readable output is available in [`reports/cross_ticker_summary.csv`](reports/cross_ticker_summary.csv), with the SPY comparison in [`reports/comparison_spy_us.csv`](reports/comparison_spy_us.csv), per-strategy trade logs in [`reports/`](reports/), and the run configuration in [`reports/run_metadata.json`](reports/run_metadata.json). These reports are generated locally by `scripts/run_analysis.py`; they are analytical evidence, not live performance or investment advice.
 
 <h2>Project Structure</h2>
 
